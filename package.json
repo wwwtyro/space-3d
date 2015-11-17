@@ -1,0 +1,37 @@
+{
+  "name": "space-3d",
+  "version": "1.0.0",
+  "description": "Quickly generate procedural 3D space scenes in your browser with WebGL",
+  "main": "",
+  "dependencies": {
+    "brfs": "^1.4.1",
+    "gulp": "^3.9.0",
+    "gulp-connect": "^2.2.0",
+    "gl-matrix": "^2.3.1",
+    "gulp-rename": "^1.2.2",
+    "query-string": "^3.0.0",
+    "rng": "^0.2.2",
+    "gulp-browserify": "^0.5.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wwwtyro/space-3d.git"
+  },
+  "keywords": [
+    "WebGL",
+    "space",
+    "gamedev",
+    "3D",
+    "nebula"
+  ],
+  "author": "Rye Terrell",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/wwwtyro/space-3d/issues"
+  },
+  "homepage": "https://github.com/wwwtyro/space-3d"
+}
