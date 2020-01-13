@@ -18023,7 +18023,7 @@ window.onload = function() {
     .name("Resolution")
     .onChange(renderTextures);
   gui.add(menu, "animationSpeed", 0, 10).name("Animation speed");
-  gui.add(menu, "saveSkybox").name("Download Skybox");
+  gui.add(menu, "saveSkybox").name("Download skybox");
 
   document.body.appendChild(gui.domElement);
   gui.domElement.style.position = "fixed";
