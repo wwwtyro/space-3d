@@ -41,9 +41,37 @@ window.onload = function() {
         const data = canvas.toDataURL().split(",")[1];
         zip.file(`${name}.png`, data, { base64: true });
       }
+      if (this.resolution <= 2048) {
+        const cubemapData = this._saveCubemap().split(",")[1];
+        zip.file('cubemap.png', cubemapData, { base64: true });    
+      }
       zip.generateAsync({ type: "blob" }).then(blob => {
         saveAs(blob, "skybox.zip");
       });
+    };
+    this._saveCubemap = function() {
+      const cubemapCanvas = document.getElementById('texture-cubemap');
+      const left = document.getElementById('texture-left');
+      const top = document.getElementById('texture-top');
+      const front = document.getElementById('texture-front');
+      const bottom = document.getElementById('texture-bottom');
+      const right = document.getElementById('texture-right');
+      const back = document.getElementById('texture-back');
+      
+      // set size of canvas depending on resolution
+      var context = cubemapCanvas.getContext('2d');
+      context.canvas.width = this.resolution * 4;
+      context.canvas.height = this.resolution * 3;
+
+      // combine images together in the texture-cubemap canvas
+      context.drawImage(left, 0, this.resolution);
+      context.drawImage(top, this.resolution, 0);
+      context.drawImage(front, this.resolution, this.resolution);
+      context.drawImage(bottom, this.resolution, this.resolution * 2);
+      context.drawImage(right, this.resolution * 2, this.resolution);
+      context.drawImage(back, this.resolution * 3, this.resolution);
+    
+      return cubemapCanvas.toDataURL("image/png");      
     };
   };
 
