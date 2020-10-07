@@ -142,7 +142,7 @@ window.onload = function() {
   }
 
   function setQueryString() {
-    const queryString = qs.stringify({
+    var queryString = qs.stringify({
       seed: menu.seed,
       fov: menu.fov,
       pointStars: menu.pointStars,
