@@ -50,7 +50,7 @@ window.onload = function() {
       });
     };
     this._saveCubemap = function() {
-      const cubemapCanvas = document.getElementById('texture-cubemap');
+      const cubemapCanvas = document.createElement('canvas');
       const left = document.getElementById('texture-left');
       const top = document.getElementById('texture-top');
       const front = document.getElementById('texture-front');
@@ -243,3 +243,4 @@ window.onload = function() {
 function generateRandomSeed() {
   return (Math.random() * 1000000000000000000).toString(36);
 }
+``

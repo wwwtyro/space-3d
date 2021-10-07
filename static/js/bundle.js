@@ -17993,7 +17993,7 @@ window.onload = function() {
       });
     };
     this._saveCubemap = function() {
-      const cubemapCanvas = document.getElementById('texture-cubemap');
+      const cubemapCanvas = document.createElement('canvas');
       const left = document.getElementById('texture-left');
       const top = document.getElementById('texture-top');
       const front = document.getElementById('texture-front');
@@ -18186,7 +18186,7 @@ window.onload = function() {
 function generateRandomSeed() {
   return (Math.random() * 1000000000000000000).toString(36);
 }
-
+``
 },{"./skybox.js":94,"./space-3d.js":95,"filesaver.js":6,"gl-matrix":7,"jszip":22,"query-string":67}],94:[function(require,module,exports){
 // jshint -W097
 // jshint undef: true, unused: true
